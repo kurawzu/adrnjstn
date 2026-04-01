@@ -1,0 +1,114 @@
+.sponsors {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sponsors-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content */
+.sponsors-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* titles */
+.sponsors-title {
+  color: #f5b04c;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-family: "Great Vibes", cursive;
+}
+
+.sponsors-title.secondary {
+  margin-top: 40px;
+}
+
+/* divider */
+.divider {
+  margin: 15px 0;
+}
+
+.divider span {
+  display: block;
+  width: 180px;
+  height: 2px;
+  background: #f5b04c;
+  position: relative;
+}
+
+.divider span::after {
+  content: "❖❖❖";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5b04c;
+  font-size: 0.8rem;
+}
+
+/* principal grid */
+.principal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 columns */
+  gap: 20px;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.principal-grid p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+}
+
+/* secondary */
+.secondary-block {
+  margin-top: 1px;
+}
+
+.secondary-block h3 {
+  font-family: "Great Vibes", cursive;
+  color: #f5b04c;
+  margin: 15px 0 5px;
+  font-size: 1.3rem;
+}
+
+.secondary-block p {
+  margin: px 0;
+  font-size: 0.95rem;
+}
+
+.rsvp-divider {
+  width: 220px;
+  height: 2px;
+  background: #f5b04c;
+  margin: 10px 0;
+  position: relative;
+}
+
+/* 📱 responsive */
+@media (max-width: 480px) {
+  .principal-grid {
+    gap: 10px;
+  }
+
+  .principal-grid p {
+    font-size: 0.75rem; /* 🔥 smaller text so it fits */
+    line-height: 1.2;
+  }
+}

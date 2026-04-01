@@ -1,0 +1,170 @@
+.event-card {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* background */
+.event-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content */
+.event-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex; /* 🔥 FIX */
+  flex-direction: column;
+  align-items: center; /* 🔥 center everything */
+
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+/* DATE ROW */
+.event-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* 🔥 FIX */
+  max-width: 500px;
+  margin: 0 auto 10px auto; /* better spacing */
+  font-size: 1rem;
+}
+
+.event-month {
+  text-align: center;
+}
+
+.event-month h2 {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.event-month p {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.event-month span {
+  font-size: 0.8rem;
+}
+
+/* divider */
+.event-divider {
+  margin: 25px 0; /* 🔥 consistent spacing */
+}
+
+.event-divider span {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: #f5b04c;
+  margin: auto;
+  position: relative;
+}
+
+.event-divider span::after {
+  content: "❖";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5b04c;
+}
+
+/* title */
+.event-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #f5b04c;
+  margin: 15px 0; /* 🔥 tighter spacing */
+}
+
+/* location */
+.event-place {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.event-address {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+/* 🔥 FIXED BUTTON */
+.location-btn {
+  display: inline-flex; /* 🔥 KEY FIX */
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px auto; /* center horizontally */
+  padding: 8px 18px;
+
+  border: 2px solid #f5b04c;
+  background: transparent;
+  color: #f5b04c;
+
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  width: fit-content; /* 🔥 prevents stretching */
+}
+
+.location-btn:hover {
+  background: #f5b04c;
+  color: #1a1a1a;
+  transform: translateY(-2px); /* subtle lift */
+}
+
+/* spacing between ceremony & reception */
+.reception-section {
+  margin-top: 10px;
+  display: flex; /* 🔥 ensures alignment */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* slightly smaller title for reception */
+.reception-title {
+  font-size: 3rem;
+}
+
+/* bottom divider spacing */
+.event-divider.bottom {
+  margin-top: 30px;
+}
+
+/* 📱 responsive */
+@media (max-width: 768px) {
+  .event-date {
+    gap: 10px;
+  }
+
+  .event-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 3rem;
+  }
+
+  .location-btn {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+}

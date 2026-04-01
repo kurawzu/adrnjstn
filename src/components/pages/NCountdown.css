@@ -1,0 +1,132 @@
+.nncountdown {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* TOP 30% 
+.top-section {
+  position: relative;
+  height: 30vh;
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+*/
+/* overlay */
+
+.top-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+/* text styles */
+.top-small {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+}
+
+.top-main {
+  font-family: "Alex Brush", cursive;
+  font-size: 3rem;
+  margin: 7px 0;
+}
+
+.top-main span {
+  font-family: "Alex Brush", cursive;
+  color: #f5b04c;
+}
+
+.top-sub {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* BOTTOM 70% */
+.bottom-section {
+  position: relative;
+  height: 100vh;
+}
+
+.bottom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay */
+.bottom-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* text overlay */
+.bottom-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding-bottom: 40px;
+  z-index: 2;
+}
+
+.bottom-small {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.bottom-names {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: #f5b04c;
+  margin: 10px 0;
+}
+
+.bottom-date {
+  font-size: 1rem;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .top-main {
+    font-size: 3rem;
+    margin: 1px 0;
+  }
+
+  .bottom-names {
+    font-size: 1.8rem;
+  }
+
+  .bottom-overlay {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-main {
+    font-size: 1.5rem;
+  }
+
+  .bottom-names {
+    font-size: 1.5rem;
+  }
+}

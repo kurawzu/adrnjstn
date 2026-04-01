@@ -1,0 +1,207 @@
+.couple-card {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* background */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 20px;
+  color: #f5b04c;
+}
+
+/* title */
+.card-title {
+  font-family: "Alex Brush", cursive;
+  font-size: 5.5rem;
+}
+
+.card-sub {
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* layout */
+.couple-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 1px;
+}
+
+/* person */
+.person {
+  max-width: 320px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.person.left {
+  animation-delay: 0.2s;
+}
+
+.person.right {
+  animation-delay: 0.4s;
+}
+
+/* ✨ image frame */
+.img-wrapper.fancy {
+  width: 170px;
+  height: 170px;
+  margin: 7px auto;
+  border-radius: 50%;
+  padding: 6px;
+
+  border: 2px solid #f5b04c;
+  box-shadow: 0 0 0 4px rgba(245, 176, 76, 0.2);
+
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.img-wrapper.fancy:hover {
+  transform: scale(1.05);
+}
+
+.img-wrapper.fancy img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ✨ GOLD divider (FIXED — no black) */
+.divider {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.divider span {
+  width: 150px;
+  height: 1px;
+  background: #f5b04c; /* ✅ changed from black */
+  position: relative;
+}
+
+.divider span::after {
+  content: "❖";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #f5b04c;
+}
+
+.divider.small span {
+  width: 120px;
+}
+
+/* name */
+.name {
+  font-family: "Alex Brush", cursive;
+  font-size: 3rem;
+}
+
+/* parents */
+.parents-title {
+  margin-top: 20x;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.parents {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: white;
+}
+
+/* center piece */
+.center-piece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* gold vertical line */
+.vertical-line {
+  width: 1px;
+  height: 220px;
+  background: #f5b04c;
+  opacity: 0.6;
+}
+
+/* ampersand */
+.amp {
+  font-family: "Alex Brush", cursive;
+  font-size: 3.5rem;
+  color: #f5b04c;
+  margin: 3px 0;
+}
+
+/* animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 responsive */
+@media (max-width: 768px) {
+  .couple-wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 2.3rem;
+  }
+
+  .amp {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 2.5rem;
+  }
+
+  .name {
+    font-size: 2.3rem;
+  }
+
+  .img-wrapper.fancy {
+    width: 130px;
+    height: 130px;
+  }
+}

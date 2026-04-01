@@ -1,0 +1,111 @@
+.rsvp {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* background */
+.rsvp-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content */
+.rsvp-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* divider */
+.rsvp-divider {
+  width: 220px;
+  height: 2px;
+  background: #f5b04c;
+  margin: 20px 0;
+  position: relative;
+}
+
+.rsvp-divider::after {
+  content: "❖❖❖";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5b04c;
+  font-size: 0.8rem;
+}
+
+/* title */
+.rsvp-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #f5b04c;
+  margin: 10px 0;
+}
+
+/* text */
+.rsvp-text {
+  max-width: 500px;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+/* form container */
+.rsvp-form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* iframe */
+.rsvp-form iframe {
+  width: 100%;
+  height: 1000px;
+  border: none;
+}
+
+/* bottom spacing */
+.rsvp-divider.bottom {
+  margin-top: 30px;
+}
+
+/* 📱 responsive */
+@media (max-width: 768px) {
+  .rsvp-title {
+    font-size: 2.3rem;
+  }
+
+  .rsvp-text {
+    font-size: 0.85rem;
+  }
+
+  .rsvp-form iframe {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rsvp-title {
+    font-size: 2rem;
+  }
+
+  .rsvp-form iframe {
+    height: 1000px;
+  }
+}

@@ -1,0 +1,289 @@
+.Intro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.hero.hide {
+  opacity: 0;
+}
+
+/* Background Image */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay for readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Center content */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* Text styles */
+.hero-sub {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.hero-small {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.hero-title {
+  font-size: 7rem;
+  color: #f5b04c;
+  font-family: "Alex Brush", cursive;
+  margin: 20px 0;
+}
+
+.normal {
+  font-size: 4rem;
+  color: white;
+  margin: 20px 0;
+}
+
+.cursive {
+  font-family: "Great Vibes", cursive;
+  font-size: 7rem;
+  color: #f5b04c;
+}
+
+/* Button */
+.hero-btn {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-small {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Countdown */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.overlay2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.place {
+  margin-bottom: 200px;
+}
+
+.place2 {
+  margin-top: 180px;
+
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Text styles */
+.top-text {
+  font-size: 2.5rem;
+  margin-bottom: 2px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
+}
+
+.names {
+  font-family: "Alex Brush", cursive;
+  color: #f5b04c;
+  font-size: 4.7rem;
+  margin: 1px 0;
+  -webkit-text-stroke: 1px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
+}
+
+.count-label {
+  font-size: 2.5rem;
+  margin: 8px 0;
+  -webkit-text-stroke: 1px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
+}
+
+/* Countdown row */
+.countdown-row {
+  display: flex;
+  gap: 40px;
+
+  padding: 10px 20px;
+  border-radius: 15px;
+
+  /* ✨ GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.1); /* transparent layer */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); /* Safari support */
+
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle edge */
+}
+
+.countdown-row h2 {
+  font-size: 2.5rem;
+  color: #f5b04c;
+  margin-bottom: 5px;
+  -webkit-text-stroke: 1px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
+}
+
+.countdown-row span {
+  font-size: 1.5rem;
+  color: #f5b04c;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
+}
+
+/* Button */
+.enter-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .names {
+    font-size: 2.8rem;
+  }
+
+  .top-text {
+    font-size: 1.4rem;
+  }
+
+  .count-label {
+    font-size: 2.8rem;
+  }
+
+  .countdown-row {
+    gap: 20px;
+  }
+
+  .countdown-row h2 {
+    font-size: 3rem;
+  }
+
+  .countdown-row span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
