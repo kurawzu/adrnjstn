@@ -84,15 +84,16 @@
 /* text */
 .ga-text {
   max-width: 500px;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   margin-bottom: 15px;
   color: white;
+  font-family: "Cormorant Garamond", serif;
   font-weight: bolder;
   -webkit-text-stroke: 2px black;
   /* Ensures the stroke doesn't overlap/thin out the white center */
   paint-order: stroke fill;
-  letter-spacing: 3.1px;
+  letter-spacing: 1px;
 }
 
 /* palette */
@@ -116,11 +117,11 @@
   }
 
   .ga-title {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   .ga-text {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 
@@ -130,7 +131,7 @@
   }
 
   .ga-title {
-    font-size: 1.7rem;
+    font-size: 2.3rem;
   }
 
   .color-palette span {

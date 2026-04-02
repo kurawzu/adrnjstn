@@ -74,6 +74,11 @@
 .principal-grid p {
   margin: 3px 0;
   font-size: 0.9rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
 }
 
 /* secondary */
@@ -91,6 +96,11 @@
 .secondary-block p {
   margin: px 0;
   font-size: 0.95rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px black;
+  /* Ensures the stroke doesn't overlap/thin out the white center */
+  paint-order: stroke fill;
 }
 
 .rsvp-divider {
@@ -108,7 +118,7 @@
   }
 
   .principal-grid p {
-    font-size: 0.75rem; /* 🔥 smaller text so it fits */
+    font-size: 0.8rem; /* 🔥 smaller text so it fits */
     line-height: 1.2;
   }
 }
