@@ -10,15 +10,17 @@ const EventCard = () => {
       <div className="event-content">
         {/* CEREMONY */}
         <div className="event-date">
-          <h2>Saturday</h2>
+          <h2 className="bru">Saturday</h2>
 
           <div className="event-month">
-            <h2>MAY</h2>
+            <h2>May</h2>
             <h2>02</h2>
             <h2>2026</h2>
           </div>
 
-          <h2>1:00 PM</h2>
+          <h2>
+            1:00 <span className="bru">PM</span>
+          </h2>
         </div>
 
         <div className="">
@@ -59,7 +61,7 @@ const EventCard = () => {
           <h1 className="event-title reception-title">Reception</h1>
 
           <p className="event-place">
-            <strong>Jechs Grand Pavilion </strong>
+            <strong>Jech's Grand Pavilion </strong>
           </p>
 
           <p className="event-address">Calasiao, Pangasinan</p>

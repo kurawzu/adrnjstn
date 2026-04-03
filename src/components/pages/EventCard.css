@@ -25,7 +25,7 @@
 
   text-align: center;
   color: white;
-  padding: 60px 20px;
+  padding: 60px 30px;
 }
 
 /* DATE ROW */
@@ -46,6 +46,7 @@
 .event-month h2 {
   margin: 0;
   letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .event-month p {

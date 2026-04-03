@@ -19,7 +19,7 @@ const Couplecard = () => {
             <div className="img-wrapper fancy">
               <img src={groom} alt="groom" />
             </div>
-
+            <div className="rsvp-divider2"></div>
             <h2 className="name">Adrean Ysmael D. Mapanao</h2>
 
             <p className="parents-title">The son of</p>
@@ -39,7 +39,7 @@ const Couplecard = () => {
             <div className="img-wrapper fancy">
               <img src={bride} alt="bride" />
             </div>
-
+            <div className="rsvp-divider2"></div>
             <h2 className="name">Justinne S. Fernandez</h2>
 
             <p className="parents-title">The daughter of</p>

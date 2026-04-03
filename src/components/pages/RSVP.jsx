@@ -1,6 +1,6 @@
 import React from "react";
 import "./RSVP.css";
-import bgPattern from "./mediapages/blue.png";
+import bgPattern from "./mediapages/beige.png";
 
 const RSVP = () => {
   return (
@@ -10,7 +10,6 @@ const RSVP = () => {
 
       <div className="rsvp-content">
         {/* TOP DIVIDER */}
-        <div className="rsvp-divider"></div>
 
         {/* TITLE */}
         <h1 className="rsvp-title">Rsvp</h1>
@@ -48,7 +47,6 @@ const RSVP = () => {
         </div>
 
         {/* BOTTOM DIVIDER */}
-        <div className="rsvp-divider bottom"></div>
       </div>
     </section>
   );

@@ -9,10 +9,14 @@ const FirstDivider = () => {
 
       <div className="divider-overlay">
         <h1 className="divider-main">
-          and the <span className="gold">Two</span> shall become{" "}
+          <span className="bruh"> and the </span>
+          <span className="gold">Two </span>{" "}
+          <span className="bruh"> shall become</span>{" "}
           <span className="gold">One.</span>
         </h1>
-        <h2 className="divider-sub">EPHESIANS 5:31</h2>
+        <h2 className="divider-sub">
+          <span className="bruh">Ephesians</span> 5:31
+        </h2>
       </div>
     </div>
   );

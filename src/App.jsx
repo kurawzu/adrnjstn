@@ -52,12 +52,12 @@ function App() {
 
       {/* hidden audio */}
       <audio ref={audioRef} src={rskitolMusic} />
-      <HomeOne />
+
       <EventCard />
       <NCountdown />
       <Couplecard />
-      <Entourage />
       <Sponsors />
+      <Entourage />
       <FirstDivider />
       <GiftsAttire />
 
