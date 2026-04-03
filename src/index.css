@@ -19,8 +19,11 @@
   width: 220px;
   height: 2px;
   background: #f5b04c;
-  margin: 18px auto;
-  position: relative;
+  margin: 15px 0;
+
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1.2s ease;
 }
 
 .rsvp-divider2::after {
@@ -31,6 +34,16 @@
   font-size: 1rem;
   color: #f5b04c;
   transform: translateX(-50%);
+}
+
+.event-card.in-view .rsvp-divider2 {
+  transform: scaleX(1);
+  transition-delay: 0.35s;
+}
+
+/* reception divider slightly delayed */
+.event-card.in-view .reception-section .rsvp-divider2 {
+  transition-delay: 1.2s;
 }
 
 .bruh {
@@ -46,4 +59,36 @@
 
 .bru {
   font-family: "Cormorant Garamond", serif;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.rsvp-divider3 {
+  width: 220px;
+  height: 2px;
+  background: #f5b04c;
+  margin: 18px auto;
+  position: relative;
+}
+
+.rsvp-divider3::after {
+  content: "❖❖❖";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  font-size: 1rem;
+  color: #f5b04c;
+  transform: translateX(-50%);
 }

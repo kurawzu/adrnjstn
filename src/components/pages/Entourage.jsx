@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Entourage.css";
 import "./Sponsors.css";
 import bgPattern from "./mediapages/blue.png";
 
 const Entourage = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+        } else {
+          el.classList.remove("in-view");
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="entourage">
+    <section ref={sectionRef} className="entourage">
       <img src={bgPattern} alt="" className="entourage-bg" />
 
       <div className="entourage-content">

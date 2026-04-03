@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./EventCard.css";
-import bgPattern from "./mediapages/blue.png"; // blue pattern
+import bgPattern from "./mediapages/blue.png";
 
 const EventCard = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+        } else {
+          el.classList.remove("in-view");
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="event-card">
+    <section ref={sectionRef} className="event-card">
       <img src={bgPattern} alt="" className="event-bg" />
 
       <div className="event-content">
@@ -24,7 +44,7 @@ const EventCard = () => {
         </div>
 
         <div className="">
-          <div className="rsvp-divider"></div>
+          <div className="rsvp-divider2"></div>
           <span></span>
         </div>
 
@@ -54,7 +74,7 @@ const EventCard = () => {
         {/* 🔥 RECEPTION SECTION */}
         <div className="reception-section">
           <div className="">
-            <div className="rsvp-divider"></div>
+            <div className="rsvp-divider2"></div>
             <span></span>
           </div>
 

@@ -23,9 +23,9 @@ const RSVP = () => {
         </p>
 
         <p className="rsvp-text">
-          Kindly confirm through the google form below or via SMS 09487336416
+          Kindly confirm through the google form below or via SMS 09483736446
           <br />
-          Mr.Erwin Cabrera.
+          Mr.Luigi Cabrera.
         </p>
 
         {/* FORM EMBED */}

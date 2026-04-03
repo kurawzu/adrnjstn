@@ -24,6 +24,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* ✨ scroll animation */
+  opacity: 0;
+  transform: translateY(80px) scale(0.98);
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+  will-change: opacity, transform;
+}
+
+.sponsors.in-view .sponsors-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* titles */
@@ -115,6 +128,32 @@
   background: #f5b04c;
   margin: 10px 0;
   position: relative;
+}
+
+/* stagger children after content fades */
+.principal-grid,
+.secondary-block,
+.sponsors-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s ease;
+}
+
+.sponsors.in-view .sponsors-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sponsors.in-view .principal-grid {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.sponsors.in-view .secondary-block {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
 /* 📱 responsive */

@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Sponsors.css";
 import bgPattern from "./mediapages/blue.png";
 
 const Sponsors = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+        } else {
+          el.classList.remove("in-view");
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="sponsors">
+    <section ref={sectionRef} className="sponsors">
       <img src={bgPattern} alt="" className="sponsors-bg" />
 
       <div className="sponsors-content">
