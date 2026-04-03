@@ -28,13 +28,21 @@ function App() {
   };
   useEffect(() => {
     if (showHero) {
-      document.body.style.overflow = "hidden"; // 🚫 disable scroll
+      // 🚫 LOCK SCROLL (strong version for Messenger)
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = "0";
+      document.body.style.left = "0";
+      document.body.style.width = "100%";
     } else {
-      document.body.style.overflow = "auto"; // ✅ enable scroll
+      // ✅ UNLOCK SCROLL
+      document.body.style.overflow = "auto";
+      document.body.style.position = "static";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // cleanup
+      document.body.style.overflow = "auto";
+      document.body.style.position = "static";
     };
   }, [showHero]);
 
