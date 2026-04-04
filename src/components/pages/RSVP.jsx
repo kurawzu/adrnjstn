@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./RSVP.css";
-import bgPattern from "./mediapages/beige.png";
+import bgPattern from "./mediapages/3.jpg";
 
 const RSVP = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+        } else {
+          el.classList.remove("in-view");
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="rsvp">
+    <section ref={sectionRef} className="rsvp">
       {/* background */}
       <img src={bgPattern} alt="" className="rsvp-bg" />
 
@@ -18,8 +38,7 @@ const RSVP = () => {
         <p className="rsvp-text">
           We look forward to celebrating with you. <br />
           We have reserved one (1) seat/s for you. <br />
-          The favor of your reply is requested on or before{" "}
-          <strong>April 18, 2026.</strong>
+          The favor of your reply is requested on or before April 18, 2026.
         </p>
 
         <p className="rsvp-text">

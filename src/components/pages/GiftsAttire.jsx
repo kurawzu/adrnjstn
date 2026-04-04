@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./GiftsAttire.css";
 import bgPattern from "./mediapages/beige.png";
-import giftsImg from "./mediapages/gifts.jpg"; // your top image
+import giftsImg from "./mediapages/gifts.jpg";
 
 const GiftsAttire = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+        } else {
+          el.classList.remove("in-view");
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="gifts-attire">
+    <section ref={sectionRef} className="gifts-attire">
       {/* TOP IMAGE */}
       <div className="ga-image">
         <img src={giftsImg} alt="couple" />

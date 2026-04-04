@@ -24,6 +24,16 @@
 
   text-align: center;
   padding: 0 15px;
+
+  /* ✨ animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s ease;
+}
+
+.first-divider.in-view .divider-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Main script text */
@@ -35,6 +45,39 @@
   -webkit-text-stroke: 2px black;
   /* Ensures the stroke doesn't overlap/thin out the white center */
   paint-order: stroke fill;
+}
+
+/* base hidden */
+.divider-main span {
+  opacity: 0;
+  transform: translateY(15px);
+  display: inline-block;
+  transition: all 0.8s ease;
+}
+
+/* stagger each phrase */
+.first-divider.in-view .divider-main span:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.first-divider.in-view .divider-main span:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.first-divider.in-view .divider-main span:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.first-divider.in-view .divider-main span:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
 }
 
 /* Subtitle */
@@ -51,8 +94,25 @@
 .gold {
   color: #f5b04c;
   font-family: "Great Vibes", cursive;
-  display: inline-block; /* important */
-  margin: 0 14px; /* controls the spacing */
+  display: inline-block;
+  margin: 0 14px;
+
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+/* ✨ pop slightly when revealed */
+.first-divider.in-view .gold {
+  transform: scale(1);
+}
+
+/* stagger gold emphasis */
+.first-divider.in-view .gold:nth-of-type(1) {
+  transition-delay: 0.45s;
+}
+
+.first-divider.in-view .gold:nth-of-type(2) {
+  transition-delay: 0.85s;
 }
 
 /* 📱 Tablet */
@@ -76,7 +136,7 @@
     height: 15vh;
   }
   .divider-main {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .divider-sub {
