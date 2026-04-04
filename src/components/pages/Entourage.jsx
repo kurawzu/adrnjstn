@@ -30,8 +30,9 @@ const Entourage = () => {
 
       <div className="entourage-content">
         {/* TOP TEXT */}
-        <h2 className="sponsors-title">To assist us with our needs...</h2>
-
+        <div className="secondary-block">
+          <h3>To assist us with our needs...</h3>
+        </div>
         {/* BEST MAN */}
         <div className="secondary-block">
           <h3>Best Man</h3>
@@ -48,7 +49,9 @@ const Entourage = () => {
         <br />
 
         {/* SECOND SCRIPT */}
-        <h2 className="sponsors-title">To guide our ways ahead...</h2>
+        <div className="secondary-block">
+          <h3>To guide our ways ahead...</h3>
+        </div>
 
         {/* GROOMSMEN */}
         <div className="secondary-block">

@@ -88,7 +88,7 @@ const Sponsors = () => {
 
         <div className="secondary-block">
           <h3>To light our path...</h3>
-          <p>Rhoderick Labinghisa</p>
+          <p>Roderick P. Labinghisa</p>
           <p>Allyzah Mae F. Labinghisa</p>
 
           <h3>To clothe us together...</h3>

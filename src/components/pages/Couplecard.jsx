@@ -65,7 +65,7 @@ const Couplecard = () => {
             <p className="parents-title">The daughter of</p>
             <p className="parents">
               Mr. Julio D. Fernandez Jr. <br />
-              Mrs. Amelia D. Fernandez
+              Mrs. Amelia S. Fernandez
             </p>
           </div>
         </div>
