@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./RSVP.css";
-import bgPattern from "./mediapages/3.jpg";
+import bgPattern from "./mediapages/yea.jpg";
 
 const RSVP = () => {
   const sectionRef = useRef(null);
